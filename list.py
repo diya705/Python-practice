@@ -31,3 +31,14 @@ print(a)
 # remove method is used to remove the first occurrence of a specific element from the list.
 a.remove(9)
 print(a)
+
+# list comprehension
+# The Python Solution (List Comprehension)
+# To solve this in one line (which is the point of the exercise), you use a nested loop inside brackets:
+x = 1
+y = 1
+z = 1
+n = 2
+
+# List comprehension syntax
+result = [[i, j, k] for i in range(x + 1) for j in range(y + 1) for k in range(z + 1) if (i + j + k) != n]

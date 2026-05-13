@@ -32,3 +32,20 @@ print(letter)
 v = "first"
 v = "second"
 print(v) # string is immutable but we can reassign the variable to a new string.
+
+# Another approach is to slice the string and join it back.
+# Example
+string = "abracadabra"
+string = string[:5] + "k" + string[6:]
+print(string)
+# abrackdabra
+
+# String .startswith()You can iterate through the main string and check if the current slice starts with your target substring. This removes the need to manually compute the ending index slice.python
+def count_substring(string, sub_string):
+    count = 0
+    for i in range(len(string)):
+        # Check if the string starting at index i begins with sub_string
+        if string[i:].startswith(sub_string):
+            count += 1
+    return count
+            
